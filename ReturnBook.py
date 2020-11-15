@@ -16,7 +16,7 @@ bookTable = "books"
 
 allBid = []  # To store all Book ID's
 
-def return():
+def returnn():
 
     global SubmitBtn, labelFrame, lb1, bookInfo1, quitBtn, root, Canvas1, status
 
@@ -81,4 +81,27 @@ def returnBook():
 
     Canvas1.config(bg="#006b38")
     Canvas1.pack(expand=True, fill=BOTH)
-    
+
+    headingFrame1 = Frame(root, bg="#ffbb00", bd=5)
+    headingFrame1.place(relx=0.25, rely=0.1, relwidth=0.5, relheight=0.13)
+
+    headingLabel = Label(headingFrame1, text="return Book", bg='black', fg='white', font=('Courier', 15))
+    headingLabel.place(relx=0, rely=0, relwidth=1, relheight=1)
+
+    labelFrame = Frame(root, bg='black')
+    labelFrame.place(relx=0.1, rely=0.3, relwidth=0.8, relheight=0.5)
+
+    # Book Id to Delete
+    lb1 = Label(labelFrame, text="Book ID: ", bg='black', fg='white')
+    lb1.place(relx=0.05, rely=0.5)
+
+    bookInfo1 = Entry(labelFrame)
+    bookInfo1.place(relx=0.3, rely=0.5, relwidth=0.62)
+
+    # Submit Button
+    SubmitBtn = Button(root, text="Return", bg='# d1ccc0', fg='black', command=returnn)
+    SubmitBtn.place(relx=0.28, rely=0.9, relwidth=0.18, relheight=0.08)
+    quitBtn = Button(root, text="Quit", bg='#f7f1e3', fg='black', command=root.destroy)
+    quitBtn.place(relx=0.53, rely=0.9, relwidth=0.18, relheight=0.08)
+
+    root.mainloop()
