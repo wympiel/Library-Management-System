@@ -95,3 +95,29 @@ def issueBook():
 
     headingLabel = Label(headingFrame1, text="Issue Book", bg='black', fg='white', font=('Courier, 15'))
     headingLabel.place(relx=0, rely=0, relwidth=1, relheight=1)
+
+    labelFrame = Frame(root, bg='black')
+    labelFrame.place(relx=0.1, rely=0.3, relwidth=0.6, relheight=0.5)
+
+    # Book ID
+    lb1 = Label(labelFrame, text="Book ID: ", bg='black', fg="white")
+    lb1.place(relx=0.05, rely=0.2,)
+
+    inf1 = Entry(labelFrame)
+    inf1.place(relx=0.3, rely=0.2, relwidth=0.62)
+
+    lb2 = Label(labelFrame, text="Issued to: ", bg='black', fg="white")
+    lb2.place(relx=0.05, rely=0.4, )
+
+    inf2 = Entry(labelFrame)
+    inf2.place(relx=0.3, rely=0.4, relwidth=0.62)
+
+    # Issue Button
+    issueBtn = Button(root, text="Issue", bg="#d1ccc0", fg='black', command=issue)
+    issueBtn.place(relx=0.28, rely=0.9, relwidth=0.18, relheight=0.08)
+
+    quitBtn = Button(root, text="Quit", bg='#aaa69d', fg='black', command=root.destroy)
+    quitBtn.place(relx=0.53, rely=0.9, relwidth=0.18, relheight=0.08)
+
+    root.mainloop()
+
